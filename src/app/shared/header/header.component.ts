@@ -31,48 +31,42 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    // Verificar inicialmente
     this.verificarToken();
     this.verificarRuta();
     
-    // Suscripción a eventos de navegación
     this.routerSubscription = this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
         this.verificarRuta();
-        this.verificarToken(); // Verificar nuevamente el token en cada navegación
+        this.verificarToken();
       });
     
-    // Suscribirse a cambios de autenticación
     this.authSubscription = this.authService.user$.subscribe(user => {
       if (user) {
         this.isLoggedIn = true;
         this.correo = user;
       } else {
-        this.verificarToken(); // Verificar por si hay un token guardado
+        this.verificarToken();
       }
     });
-    
-    // Evento para cerrar el menú al hacer clic fuera de él
+
     document.addEventListener('click', this.handleDocumentClick.bind(this));
   }
 
   ngOnDestroy(): void {
-    // Limpiar suscripciones
+
     if (this.authSubscription) {
       this.authSubscription.unsubscribe();
     }
     if (this.routerSubscription) {
       this.routerSubscription.unsubscribe();
     }
-    
-    // Eliminar event listener
+
     document.removeEventListener('click', this.handleDocumentClick.bind(this));
   }
 
   verificarRuta(): void {
     const rutaActual = this.router.url;
-    // No mostrar elementos en la página de login
     this.mostrarElementos = !['/login'].includes(rutaActual);
   }
 
@@ -82,7 +76,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
       const payload = this.tokenService.decodePayload(token);
       this.isLoggedIn = true;
       this.correo = payload.correo || '';
-      // Actualizar el servicio de autenticación también
       if (this.correo) {
         this.authService.setUser(this.correo);
       }
@@ -100,7 +93,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   handleDocumentClick(event: Event): void {
-    // Cerrar el menú si se hace clic fuera de él
     if (this.userMenuOpen) {
       const target = event.target as HTMLElement;
       if (!target.closest('.user-menu-container')) {
