@@ -1,0 +1,14 @@
+<svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto">
+    <rect x="10" y="10" width="180" height="100" rx="3" fill="#3b6e43" stroke="#2c4d30" stroke-width="3" />
+    <rect x="15" y="15" width="170" height="90" fill="#304d36" stroke="#243d29" stroke-width="1" />
+    <line x1="25" y1="35" x2="175" y2="35" stroke="#3e5e44" stroke-width="1" stroke-dasharray="2,2" />
+    <line x1="25" y1="55" x2="175" y2="55" stroke="#3e5e44" stroke-width="1" stroke-dasharray="2,2" />
+    <line x1="25" y1="75" x2="175" y2="75" stroke="#3e5e44" stroke-width="1" stroke-dasharray="2,2" />
+    <line x1="25" y1="95" x2="175" y2="95" stroke="#3e5e44" stroke-width="1" stroke-dasharray="2,2" />
+    <text x="100" y="65" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="rgba(255, 255, 255, 0.8)">ClassRoom</text>
+    <rect x="60" y="120" width="80" height="6" rx="2" fill="#2c4d30" stroke="#243d29" stroke-width="1" />
+    <rect x="70" y="118" width="10" height="3" rx="1" fill="white" />
+    <rect x="85" y="118" width="10" height="3" rx="1" fill="#ff4f4f" />
+    <rect x="100" y="118" width="10" height="3" rx="1" fill="#4f4fff" />
+    <rect x="115" y="118" width="10" height="3" rx="1" fill="#4fff4f" />
+</svg>

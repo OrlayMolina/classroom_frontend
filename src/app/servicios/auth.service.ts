@@ -16,7 +16,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   public login(loginDTO: LoginDTO): Observable<MensajeDTO> {
-    return this.http.post<MensajeDTO>(`${this.authURL}/login`, loginDTO);
+    return this.http.post<MensajeDTO>(`${this.authURL}/autenticar`, loginDTO);
   }
 
   setUser(correo: string) {

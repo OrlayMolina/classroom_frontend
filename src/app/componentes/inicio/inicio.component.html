@@ -1,1 +1,399 @@
-<p>inicio works!</p>
+<div>
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2">
+                    <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+                        Educación de calidad a tu alcance
+                    </h1>
+                    <p class="mt-6 text-4xl text-gray-700 max-w-3xl">
+                        Descubre nuestra amplia oferta de cursos diseñados para impulsar tu carrera profesional y expandir tus horizontes educativos.
+                    </p>
+                    <div class="mt-10 flex gap-4">
+                        <a [routerLink]="" class="bg-white text-indigo-600 hover:text-indigo-700 px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition duration-300">
+                            Ver Cursos
+                        </a>
+                        <a [routerLink]="" class="border border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-3 rounded-lg font-semibold transition duration-300">
+                            Más Información
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 lg:mt-0 lg:w-1/2">
+                    <img src="/img/banner.jpg" alt="Estudiantes" class="rounded-xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Cursos Destacados
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                    Explora nuestros programas académicos más populares y da el siguiente paso en tu desarrollo profesional.
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Curso 1 -->
+                <a href="/cursos/desarrollo-web" class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 card-hover" routerLink="/cursos/desarrollo-web">
+                    <div class="relative">
+                        <img src="/api/placeholder/400/240" alt="Desarrollo Web" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-cyan-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Más Popular
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="fas fa-clock mr-2"></i> 12 semanas
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-user-graduate mr-2"></i> 324 estudiantes
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Desarrollo Web Full Stack</h3>
+                        <p class="text-gray-600 mb-4">Aprende a construir aplicaciones web completas usando las tecnologías más demandadas del mercado.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-indigo-600 text-lg">$249.99</span>
+                            <div class="flex items-center">
+                                <div class="flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star-half-alt text-yellow-400"></i>
+                                </div>
+                                <span class="ml-1 text-sm text-gray-500">(128)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Curso 2 -->
+                <a href="/cursos/data-science" class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 card-hover" routerLink="/cursos/data-science">
+                    <img src="/api/placeholder/400/240" alt="Data Science" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="fas fa-clock mr-2"></i> 16 semanas
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-user-graduate mr-2"></i> 287 estudiantes
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ciencia de Datos</h3>
+                        <p class="text-gray-600 mb-4">Domina el análisis de datos, machine learning y visualización para tomar decisiones basadas en datos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-indigo-600 text-lg">$299.99</span>
+                            <div class="flex items-center">
+                                <div class="flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                                <span class="ml-1 text-sm text-gray-500">(94)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Curso 3 -->
+                <a href="/cursos/diseno-ux" class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 card-hover" routerLink="/cursos/diseno-ux">
+                    <img src="/api/placeholder/400/240" alt="Diseño UX" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="fas fa-clock mr-2"></i> 10 semanas
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-user-graduate mr-2"></i> 215 estudiantes
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Diseño UX/UI</h3>
+                        <p class="text-gray-600 mb-4">Crea experiencias digitales atractivas y funcionales que cautiven a los usuarios.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-indigo-600 text-lg">$199.99</span>
+                            <div class="flex items-center">
+                                <div class="flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star-half-alt text-yellow-400"></i>
+                                </div>
+                                <span class="ml-1 text-sm text-gray-500">(76)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="/cursos" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-cyan-600 to-blue-800" routerLink="/cursos">
+                    Ver todos los cursos
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horarios Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Próximos Horarios
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                    Consulta la disponibilidad y planifica tu horario de estudios.
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Horario 1 -->
+                <a href="/horarios/desarrollo-web" class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 card-hover" routerLink="/horarios/desarrollo-web">
+                    <div class="p-6 border-b border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900">Desarrollo Web Full Stack</h3>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-calendar-alt mr-2 text-indigo-500"></i>
+                            <span>Inicio: 15 de Mayo, 2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-clock text-indigo-500 mr-2"></i>
+                                    <span>Lunes y Miércoles</span>
+                                </div>
+                                <span class="text-gray-700">18:00 - 21:00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-user-tie text-indigo-500 mr-2"></i>
+                                    <span>Prof. Martínez</span>
+                                </div>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Cupos disponibles</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-indigo-500 mr-2"></i>
+                                    <span>Aula Virtual 3</span>
+                                </div>
+                                <span class="text-gray-700">Modalidad: Online</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Horario 2 -->
+                <a href="/horarios/data-science" class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 card-hover" routerLink="/horarios/data-science">
+                    <div class="p-6 border-b border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900">Ciencia de Datos</h3>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-calendar-alt mr-2 text-indigo-500"></i>
+                            <span>Inicio: 20 de Mayo, 2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-clock text-indigo-500 mr-2"></i>
+                                    <span>Martes y Jueves</span>
+                                </div>
+                                <span class="text-gray-700">19:00 - 22:00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-user-tie text-indigo-500 mr-2"></i>
+                                    <span>Prof. González</span>
+                                </div>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Pocos cupos</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-indigo-500 mr-2"></i>
+                                    <span>Laboratorio 2</span>
+                                </div>
+                                <span class="text-gray-700">Modalidad: Híbrido</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Horario 3 -->
+                <a href="/horarios/diseno-ux" class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 card-hover" routerLink="/horarios/diseno-ux">
+                    <div class="p-6 border-b border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900">Diseño UX/UI</h3>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-calendar-alt mr-2 text-indigo-500"></i>
+                            <span>Inicio: 10 de Mayo, 2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-clock text-indigo-500 mr-2"></i>
+                                    <span>Sábados</span>
+                                </div>
+                                <span class="text-gray-700">09:00 - 14:00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-user-tie text-indigo-500 mr-2"></i>
+                                    <span>Prof. Sánchez</span>
+                                </div>
+                                <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Últimos cupos</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-indigo-500 mr-2"></i>
+                                    <span>Aula Virtual 5</span>
+                                </div>
+                                <span class="text-gray-700">Modalidad: Online</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="/horarios" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-600 bg-white hover:bg-gray-50 border-indigo-600" routerLink="/horarios">
+                    Ver todos los horarios
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matriculas Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Información de Matrículas
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                    Conoce nuestros planes y opciones de inscripción.
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-8 md:grid-cols-3">
+                <!-- Plan Básico -->
+                <a href="/matriculas/plan-basico" class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 card-hover border-2 border-gray-100" routerLink="/matriculas/plan-basico">
+                    <div class="p-8">
+                        <h3 class="text-lg font-medium text-gray-900">Plan Básico</h3>
+                        <div class="mt-4 flex items-baseline text-gray-900">
+                            <span class="text-5xl font-extrabold tracking-tight">$99</span>
+                            <span class="ml-1 text-xl font-semibold">/mes</span>
+                        </div>
+                        <p class="mt-5 text-gray-500">Ideal para comenzar tu formación.</p>
+                        
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Acceso a 5 cursos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Soporte por email</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Certificado digital</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 pt-0 pb-8 text-center bg-gray-50">
+                        <span class="block w-full rounded-md shadow-sm">
+                            <button type="button" class="py-3 px-4 w-full bg-gradient-to-r from-cyan-600 to-blue-800 text-white font-medium rounded-md">
+                                Más información
+                            </button>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Plan Profesional -->
+                <a href="/matriculas/plan-profesional" class="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 card-hover border-2 border-cyan-600 scale-105 z-10" routerLink="/matriculas/plan-profesional">
+                    <div class="absolute top-0 inset-x-0">
+                        <div class="bg-cyan-600 text-white text-xs text-center py-1 font-semibold uppercase tracking-wide">
+                            Más popular
+                        </div>
+                    </div>
+                    <div class="p-8 pt-10">
+                        <h3 class="text-lg font-medium text-gray-900">Plan Profesional</h3>
+                        <div class="mt-4 flex items-baseline text-gray-900">
+                            <span class="text-5xl font-extrabold tracking-tight">$199</span>
+                            <span class="ml-1 text-xl font-semibold">/mes</span>
+                        </div>
+                        <p class="mt-5 text-gray-500">Para estudiantes comprometidos.</p>
+                        
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Acceso a todos los cursos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Soporte prioritario 24/7</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Tutorías personalizadas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Certificado físico y digital</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 pt-0 pb-8 text-center bg-gray-50">
+                        <span class="block w-full rounded-md shadow-sm">
+                            <button type="button" class="py-3 px-4 w-full bg-gradient-to-r from-cyan-600 to-blue-800 text-white font-medium rounded-md">
+                                Más información
+                            </button>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Plan Corporativo -->
+                <a href="/matriculas/plan-corporativo" class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 card-hover border-2 border-gray-100" routerLink="/matriculas/plan-corporativo">
+                    <div class="p-8">
+                        <h3 class="text-lg font-medium text-gray-900">Plan Corporativo</h3>
+                        <div class="mt-4 flex items-baseline text-gray-900">
+                            <span class="text-5xl font-extrabold tracking-tight">$399</span>
+                            <span class="ml-1 text-xl font-semibold">/mes</span>
+                        </div>
+                        <p class="mt-5 text-gray-500">Solución para equipos y empresas.</p>
+                        
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Acceso ilimitado a todos los cursos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Hasta 5 usuarios por cuenta</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Administración de equipo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-600">Contenido personalizado</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 pt-0 pb-8 text-center bg-gray-50">
+                        <span class="block w-full rounded-md shadow-sm">
+                            <button type="button" class="py-3 px-4 w-full bg-gradient-to-r from-cyan-600 to-blue-800 text-white font-medium rounded-md">
+                                Más información
+                            </button>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
