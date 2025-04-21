@@ -19,8 +19,8 @@ export class AuthService {
     return this.http.post<MensajeDTO>(`${this.authURL}/autenticar`, loginDTO);
   }
 
-  setUser(correo: string) {
-    this.userSubject.next(correo);
+  setUser(email: string) {
+    this.userSubject.next(email);
   }
 
   logout() {

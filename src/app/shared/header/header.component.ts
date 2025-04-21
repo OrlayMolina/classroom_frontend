@@ -17,7 +17,7 @@ import { filter, Subscription } from 'rxjs';
 export class HeaderComponent implements OnInit, OnDestroy {
 
   mostrarElementos: boolean = true;
-  correo: string = '';
+  email: string = '';
   isLoggedIn: boolean = false;
   userMenuOpen: boolean = false;
   
@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.authSubscription = this.authService.user$.subscribe(user => {
       if (user) {
         this.isLoggedIn = true;
-        this.correo = user;
+        this.email = user;
       } else {
         this.verificarToken();
       }
@@ -75,13 +75,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
     if (token) {
       const payload = this.tokenService.decodePayload(token);
       this.isLoggedIn = true;
-      this.correo = payload.correo || '';
-      if (this.correo) {
-        this.authService.setUser(this.correo);
+      this.email = payload.email || '';
+      if (this.email) {
+        this.authService.setUser(this.email);
       }
     } else {
       this.isLoggedIn = false;
-      this.correo = '';
+      this.email = '';
     }
   }
 

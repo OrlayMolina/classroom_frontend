@@ -44,7 +44,7 @@ export class TokenService {
     const token = this.getToken();
     if (token) {
       const values = this.decodePayload(token);
-      return values.id_empleado;
+      return values.user_id;
     }
     return '';
   }
