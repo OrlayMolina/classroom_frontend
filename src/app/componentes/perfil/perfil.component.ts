@@ -95,10 +95,14 @@ export class PerfilComponent implements OnInit {
     if (this.perfilForm.valid && this.usuario) {
       const usuarioActualizado: UsuarioDto = {
         ...this.usuario,
+        usuarioId: this.usuario.usuarioId,
         email: this.perfilForm.get('email')?.value,
+        clave: this.usuario.clave,
         documentoId: this.perfilForm.get('documentoId')?.value,
         nombre: this.perfilForm.get('nombre')?.value,
-        apellido: this.perfilForm.get('apellido')?.value
+        apellido: this.perfilForm.get('apellido')?.value,
+        rolId: this.usuario.rolId,
+        nombreRol: this.usuario.nombreRol
       };
 
       this.userService.actualizarUsuario(id, usuarioActualizado).subscribe({

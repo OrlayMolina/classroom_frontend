@@ -1,0 +1,266 @@
+/* examenes.component.css */
+
+/* Animaciones personalizadas */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Clases de utilidad adicionales */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Mejoras de hover para las tarjetas */
+.examen-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.examen-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Gradientes personalizados */
+.gradient-cyan-blue {
+  background: linear-gradient(to right, #0891b2, #1e40af);
+}
+
+.gradient-hover {
+  transition: all 0.3s ease;
+}
+
+.gradient-hover:hover {
+  background: linear-gradient(to right, #0e7490, #1d4ed8);
+  transform: translateY(-1px);
+}
+
+/* Estados de los badges */
+.badge-disponible {
+  background-color: #bbf7d0; /* Tailwind bg-green-100 */
+  color: #166534;           /* Tailwind text-green-800 */
+}
+
+.badge-proximamente {
+  background-color: #fef9c3; /* Tailwind bg-yellow-100 */
+  color: #854d0e;            /* Tailwind text-yellow-800 */
+}
+
+.badge-finalizado {
+  background-color: #f3f4f6; /* Tailwind bg-gray-100 */
+  color: #1f2937;            /* Tailwind text-gray-800 */
+}
+
+/* Botones con estados especiales */
+.btn-primary {
+  background: linear-gradient(to right, #0891b2, #1e40af); /* Tailwind bg-gradient-to-r from-cyan-600 to-blue-800 */
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s, background 0.3s;
+}
+.btn-primary:hover {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+}
+
+.btn-secondary {
+  background-color: #f3f4f6; /* Tailwind bg-gray-100 */
+  color: #374151;            /* Tailwind text-gray-700 */
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+.btn-secondary:hover {
+  background-color: #e5e7eb; /* Tailwind bg-gray-200 */
+}
+
+.btn-success {
+  background-color: #bbf7d0; /* Tailwind bg-green-100 */
+  color: #15803d;            /* Tailwind text-green-700 */
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+.btn-success:hover {
+  background-color: #86efac; /* Tailwind bg-green-200 */
+}
+
+.btn-warning {
+  background-color: #fef9c3; /* Tailwind bg-yellow-100 */
+  color: #b45309;            /* Tailwind text-yellow-700 */
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+.btn-warning:hover {
+  background-color: #fde68a; /* Tailwind bg-yellow-200 */
+}
+
+.btn-danger {
+  background-color: #fecaca; /* Tailwind bg-red-100 */
+  color: #b91c1c;            /* Tailwind text-red-700 */
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+.btn-danger:hover {
+  background-color: #fca5a5; /* Tailwind bg-red-200 */
+}
+
+/* Efectos de loading */
+.loading-spinner {
+  border: 3px solid #f3f4f6;
+  border-top: 3px solid #0891b2;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Skeleton loading para las tarjetas */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+.alert-error {
+  background-color: #fef2f2; /* Tailwind bg-red-50 */
+  border: 1px solid #fecaca; /* Tailwind border-red-200 */
+  color: #b91c1c;            /* Tailwind text-red-700 */
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.alert-success {
+  background-color: #f0fdf4; /* Tailwind bg-green-50 */
+  border: 1px solid #bbf7d0; /* Tailwind border-green-200 */
+  color: #15803d;            /* Tailwind text-green-700 */
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.alert-warning {
+  background-color: #fefce8; /* Tailwind bg-yellow-50 */
+  border: 1px solid #fef9c3; /* Tailwind border-yellow-200 */
+  color: #b45309;            /* Tailwind text-yellow-700 */
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.alert-info {
+  background-color: #eff6ff; /* Tailwind bg-blue-50 */
+  border: 1px solid #bfdbfe; /* Tailwind border-blue-200 */
+  color: #1d4ed8;            /* Tailwind text-blue-700 */
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}   grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Focus states para accesibilidad */
+.focus\:ring-cyan:focus {
+  outline: 2px solid #0891b2;
+  outline-offset: 2px;
+}
+
+/* Transiciones suaves para todos los elementos interactivos */
+button, input, select {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Estilos para los iconos SVG */
+svg {
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover svg {
+  transform: scale(1.05);
+}
+
+/* Mejoras para el scroll */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Estados de error y éxito */
+.alert-error {
+  background-color: #fef2f2; /* Tailwind bg-red-50 */
+  border: 1px solid #fecaca; /* Tailwind border-red-200 */
+  color: #b91c1c;            /* Tailwind text-red-700 */
+  padding: 0.75rem 1rem;     /* Tailwind px-4 py-3 */
+  border-radius: 0.5rem;     /* Tailwind rounded-lg */
+}
+
+.alert-success {
+  background-color: #f0fdf4; /* Tailwind bg-green-50 */
+  border: 1px solid #bbf7d0; /* Tailwind border-green-200 */
+  color: #15803d;  
+}
+.alert-warning {
+  background-color: #fefce8; /* Tailwind bg-yellow-50 */
+  border: 1px solid #fef9c3; /* Tailwind border-yellow-200 */
+  color: #b45309;            /* Tailwind text-yellow-700 */
+  padding: 0.75rem 1rem;     /* Tailwind px-4 py-3 */
+  border-radius: 0.5rem;     /* Tailwind rounded-lg */
+}
+
+.alert-info {
+  background-color: #eff6ff; /* Tailwind bg-blue-50 */
+  border: 1px solid #bfdbfe; /* Tailwind border-blue-200 */
+  color: #1d4ed8;            /* Tailwind text-blue-700 */
+  padding: 0.75rem 1rem;     /* Tailwind px-4 py-3 */
+  border-radius: 0.5rem;     /* Tailwind rounded-lg */
+}
+
+.alert-info {
+  background-color: #eff6ff; /* Tailwind bg-blue-50 */
+  border: 1px solid #bfdbfe; /* Tailwind border-blue-200 */
+  color: #1d4ed8;            /* Tailwind text-blue-700 */
+  padding: 0.75rem 1rem;     /* Tailwind px-4 py-3 */
+  border-radius: 0.5rem;     /* Tailwind rounded-lg */
+}

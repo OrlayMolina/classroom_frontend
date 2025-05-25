@@ -5,11 +5,11 @@ export interface CursoDto {
     profesorId: number;
     horarioId: number;
     diaId: number;
-    nombrePlanEstudio: string;
-    nombreProfesor: string;
-    apellidoProfesor: string;
-    horaInicio: string;
-    horaFin: string;
-    ubicacion: string;
-    nombreDia: string;
-}
+    nombrePlanEstudio?: string;
+    nombreProfesor?: string;
+    apellidoProfesor?: string;
+    horaInicio?: string;
+    horaFin?: string;
+    ubicacion?: string;
+    nombreDia?: string;
+  }

@@ -49,6 +49,15 @@ export class TokenService {
     return '';
   }
 
+  public getUsuarioActual(): string {
+    const token = this.getToken();
+    if (token) {
+      const values = this.decodePayload(token);
+      return values.rol_id;
+    }
+    return '';
+  }
+
   public getEmail(): string {
     const token = this.getToken();
     if (token) {

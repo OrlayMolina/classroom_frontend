@@ -8,3 +8,11 @@ export interface ConfiguracionExamenDto {
     limiteTiempo: number;
     examenId: number;
 }
+
+// export interface ConfiguracionExamenDto {
+//   configuracionId?: number;
+//   examenId: number;
+//   aleatorizarPreguntas: boolean;
+//   aleatorizarOpciones: boolean;
+//   mostrarProgreso: boolean;
+// }
