@@ -130,7 +130,7 @@ export class ExamenesComponent implements OnInit {
   }
 
   crearExamen(): void {
-    this.router.navigate(['/cursos', this.cursoId, 'examenes', 'nuevo']);
+    this.router.navigate(['cursos/examenes/crear-examen']);
   }
 
   verExamen(examenId: number): void {
